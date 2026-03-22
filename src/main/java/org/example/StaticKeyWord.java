@@ -7,12 +7,11 @@ Static --> any object or variable --> this belongs to class
 class EmployeeDetails{
 
 
+    static String CompanyName;
+    private String name;
     public void setName(String name) {
         this.name = name;
     }
-
-    private String name;
-
 
     public static String getCompanyName()
     {
@@ -21,7 +20,7 @@ class EmployeeDetails{
 
     }
 
-    static String CompanyName;
+
 }
 public class StaticKeyWord {
     public static void main(String[] args) {
