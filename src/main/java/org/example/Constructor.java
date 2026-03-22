@@ -31,6 +31,13 @@ Parametrized
 //Parametrized
 //Usage of this keyword
 
+//Rules
+/*
+1. The name should be same as Class name --> Syntax rule
+2. Constructor cannot have a return type
+3. Constructor cannot be abstract, final, static
+ */
+
 public class Constructor {
 
     public static void main(String[] args) {
