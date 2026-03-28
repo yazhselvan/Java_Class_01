@@ -9,6 +9,7 @@ class EmployeeDetails{
 
     static String CompanyName;
     private String name;
+
     public void setName(String name) {
         this.name = name;
     }
@@ -22,6 +23,7 @@ class EmployeeDetails{
 
 
 }
+
 public class StaticKeyWord {
     public static void main(String[] args) {
 
@@ -33,6 +35,7 @@ public class StaticKeyWord {
         ed.setName("Jenifer");
         EmployeeDetails ed1 = new EmployeeDetails();
         ed1.setName("John");
+        String companyName = EmployeeDetails.getCompanyName();
         System.out.println(EmployeeDetails.getCompanyName());
         //Object creation is not required if a method is static
         //Syntax = for method access --> Classname.MethodName
