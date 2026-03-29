@@ -27,6 +27,11 @@ class B extends A{
         System.out.println("in B");
     }
 }
+
+//class C extends B,A{ // --> Multiple Inheritance  --> this will not be supported by Java
+//
+//    //why is Multiple inheriance not supported ?
+//}
 public class SuperDemo {
     public static void main(String[] args) {
         B obj = new B();
