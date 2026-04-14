@@ -129,4 +129,10 @@ public class ListDemo {
 
     }
 
+    //Task --> GCD of numbers
+    /* 20, 28
+    4
+
+     */
+
 }
