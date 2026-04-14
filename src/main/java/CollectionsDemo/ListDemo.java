@@ -1,7 +1,6 @@
 package CollectionsDemo;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class ListDemo {
 
@@ -36,7 +35,7 @@ public class ListDemo {
         3. will maintain insertion order
         4. it can hold duplicate values
         5. RandomAccess --> Searching is faster in ArrayList --> o(1)
-        6. insertion in Arraylist --> o(n)
+        6. insertion and deletion in Arraylist --> o(n)
         DSA - Data Structures and Algorithm
         o(1),               0(n),               0(n^2)
         |                                           |
@@ -46,7 +45,31 @@ public class ListDemo {
         Web Table or db table Values retrieval
          */
 
+        /*
+        LinkedList -->
+        Properties
+       1. Heterogenous in nature unless Generics are defined
+        2. Generics will be defined in format  <>.
+        3. will maintain insertion order
+        4. it can hold duplicate values
+        5. No RandomAccess --> Searching --> Slower
+        6. Insertion or deletion --> this is faster than ArrayList
+
+        LinkedList will not have indexing
+        Node Formatting -->
+        First Element --> Head
+        Last Elment --> Tail
+
+        Head, Pointer, Tail
+
+        [1,2,3,4,5]
+
+        Head -->1 --> pointer -->2 --> pointer --> 3 --- so on --> 5 --> tail
+         */
+
         List<String> newList = new ArrayList<String>();
+        List<String> newList2 = new ArrayList<String>();
+
         newList.add("HCL");
         newList.add("CG");
         newList.add("CTS");
@@ -55,6 +78,9 @@ public class ListDemo {
         newList.set(2,"CGI");
         System.out.println(newList.get(2));
         System.out.println(newList);
+        newList2.addAll(newList);
+        System.out.println("------/printing newList2/---------");
+        System.out.println(newList2);
 
         System.out.println("--------forward iteration ----------");
         for(int i = 0; i<newList.size(); i++){
@@ -69,6 +95,36 @@ public class ListDemo {
         for(String company : newList){ //for every element inside the list
             System.out.println(company);
         }
+
+        Iterator <String> listIterator = newList.listIterator(); //Collections -> used for list or set
+
+        System.out.println("-------- iteration using iterator ----------");
+        while(listIterator.hasNext()){ //iterates unitil next value is present
+            System.out.println(listIterator.next());
+        }
+
+        System.out.println("-------- iteration using iterator reverse----------");
+        System.out.println(newList2);
+        ListIterator <String> iterator2 = newList2.listIterator();
+        while(iterator2.hasPrevious()){
+            System.out.println(iterator2.previous());
+        } //To be checked
+
+        System.out.println("-------- LinkedList----------");
+        List <String> linkedList = new LinkedList<String>();
+        linkedList.add("John");
+        linkedList.add("Priya");
+        linkedList.add("Latha");
+        linkedList.add("Priya");
+        linkedList.remove("Latha");
+        linkedList.addFirst("FirstName");
+        linkedList.addLast("LastName");
+
+
+        System.out.println(linkedList);
+
+
+
 
 
     }
