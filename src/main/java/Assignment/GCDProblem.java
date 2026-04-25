@@ -3,6 +3,9 @@ package Assignment;
 public class GCDProblem {
 
     public static int findGCD(int a, int b){
+        if(a == 0 || b ==0){
+            return Math.max(a,b);
+        }
         int result = Math.min(a,b);// --> return minimum of 2 numbers
         /*
         while(condition){
